@@ -4,13 +4,15 @@ class AddTodo extends React.Component {
     state = {
         title : ""
     }
-    onChange = (e) => this.setState({title : e.target.value});
-
+   
     onSubmit = (e) => {
         e.preventDefault();
         this.props.addTodo(this.state.title);
         this.setState({title : ""});
     }
+
+    onChange = (e) => this.setState({title : e.target.value}); //{e.target.name : e.target.value} we can use name attribute of other name type like e.target.email or e.target.contact etc.
+
 
 render () {
     return (
